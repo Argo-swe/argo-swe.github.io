@@ -1,0 +1,227 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root
+{
+    --hBgColor: #000;
+    --hTextColor: #fff;
+    --bgColor: #eee;
+    --txtColor: #000;
+    --fBgColor: #000; 
+    --fTextColor: #fff;
+    --visitedLinkColor: #99221a;
+    --linkColor: #333;
+    --font-body-family: "Poppins", sans-serif;
+    --sectionBgColor: #fff;
+    --goToTopBgColor: #353535;
+    --goToTopTxtColor: #fff; 
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+html body {
+    font-size: 100%;
+    font-family: var(--font-body-family);
+    background-color: var(--bgColor);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+abbr[title] {
+    text-decoration: none;
+}
+
+.navigation-helps {
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+header {
+    background-color: var(--hBgColor);
+    color: var(--hTextColor);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 1em;
+}
+
+.title-container {
+    display: none;
+}
+
+#menu {
+    flex: 1;
+}
+
+#menu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu ul li {
+    font-size: 1.2em;
+    padding: 0.5em;
+    margin: 0 1em;
+}
+
+#menu a {
+    color: var(--hTextColor);
+    text-decoration: none;
+}
+
+.hamb {
+    display: none;
+}
+
+main {
+    flex: 1 0 auto;
+    color: var(--txtColor);
+    max-width: 1024px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#go-to-top {
+    position: fixed;
+    bottom: 1.2em;
+    right: 1.8em;
+    background-color: var(--goToTopBgColor);
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 20px 0 rgba(0,0,0,.20);
+    opacity: 0;
+    z-index: 99;
+}
+
+#go-to-top a {
+    color: var(--goToTopTxtColor);
+    text-decoration: none;
+}
+
+#go-to-top i {
+    font-size: 1.6em;
+    font-weight: bold;
+    padding: 0.5em;
+}
+
+#go-to-top.active {
+    opacity: 1;
+}
+
+footer {
+    font-size: 1.1em;
+    background-color: var(--fBgColor);
+    color: var(--fTextColor);
+    text-align: center;
+    padding: 1.5em 1em;
+}
+
+.welcome {
+    text-align: center;
+    padding: 0.5em;
+    margin: 2em 0.5em;
+    margin-top: 6em;
+}
+
+.logo-container {
+    margin: 0.5em;
+}
+
+.logo-container h1 {
+    max-width: 4.25em;
+    width: 100%;
+    height: 3.45em;
+    background-image: url(../assets/argo_logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-indent: -9999em;
+    font-size: 3.5em;
+    margin: auto;
+}
+
+section {
+    background-color: var(--sectionBgColor);
+    padding: 1em;
+    margin: 1em 0.8em;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 10px 24px 0, rgba(0, 0, 0, 0.1) 0 1px 3px 0, rgba(255, 255, 255, 0.02) 0 0 0 1px inset;
+}
+
+section hr {
+    width: 4rem;
+    border-radius: 5px;
+    border: 4px solid #333;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+section p {
+    margin: 1em 0;
+}
+
+section ul:not(.group-members-container) {
+    padding-inline-start: 2.5em;
+}
+
+section ul:not(.group-members-container) li {
+    margin: 1em 0;
+}
+
+section a {
+    color: var(--linkColor);
+    font-weight: 700;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+section ul:not(.group-members-container) a:visited {
+    color: var(--visitedLinkColor);
+}
+
+.group-members-container {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 0.8em;
+}
+
+.group-members-container li {
+    background-color: #F5F5F0;
+    text-align: center;
+    flex: 1 1 14em;
+    max-width: 14em;
+    padding: 0.8em;
+    margin: 0.8em 0.6em;
+    border-radius: 10px;
+    border: 2px outset #99221a;
+}
+
+.group-members-container li h3 {
+    margin-bottom: 0.6em;
+}
